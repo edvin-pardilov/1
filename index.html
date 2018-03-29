@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>lol</title>
+	</head>
+	<body>
+<canvas id="gc" width="1024" height="768"></canvas>
+<script type="text/javascript">
+	const h1=110;
+	const w1=12;
+	const c = document.getElementById('gc');
+	const field = c.getContext('2d');
+	const block1 = c.getContext('2d');
+	const block2 = c.getContext('2d');
+	const ball=c.getContext('2d');
+	setInterval(update,30);
+
+window.onload=function(){
+
+}
+function update(){
+	field.fillStyle='black';
+	field.fillRect(0,0,c.width,c.height);
+block1.fillStyle='white';
+block1.fillRect(3,1,w1,h1);
+block2.fillStyle='white';
+block2.fillRect(c.width-14, 1,w1,h1);
+ball.fillStyle='white'
+ball.fillRect(c.width/2,Math.random(768),15,15);
+}
+</script>
+</body>
+</html>
